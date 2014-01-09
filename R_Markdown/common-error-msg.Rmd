@@ -1,0 +1,32 @@
+# Why doesn't my code work? - Common things to check
+
+There could be many reasons why your code doesn't work, but that doesn't mean all is lost. These are the most common things you should check:
+
+### Error Messages
+
+Read the error message - R can sometimes be a bit cryptic with error messages, but they usually point you in the right direction. Most of the time it involves checking exactly what you typed - typos are very common in R. Remember you can press 'up' on the keyboard to see the last command and edit it - you don't need to type out the whole thing again. You can also run the `history()` command to see all of your previous commands. 
+
+Here's some hints on specific error messages:
+
+1. "`Error: unexpected ','`" is fairly self-explanatory - remove the extra comma!
+
+1. "`Error - unexpected symbol`" could mean that you've missed an `=` sign, quote mark `'` or some other small but vital piece of information.
+
+1. "`Error: object not found`" means that R can't find the object you are referring to. Remember R is case sensitive (i.e. the lower case and CAPITAL letters must be the same when referring  to an object) so `House.prices` is not the same object as `house.prices`. Also check that you've spelt the object name correctly. You can use '`ls()`' to give you a list of all the current objects in R. 
+
+If you get a different error message, or no message, check exactly what you have typed. If you can't see anything wrong, get the person sitting next to you to check - a second pair of eyes is often useful. 
+
+### Packages
+
+Sometimes missing packages can be a problem.
+
+1. Remember when using packages there are two stages to this - installing the package, and then loading the package (using the `library()` command). 
+
+2. The install command looks like this: `install.packages("maptools", depend = TRUE)` where `maptools` is the package name in this case. When you do this it may ask for a mirror to be selected, by opening a new window - just click one of the UK ones to continue. 
+
+3. If R says `Error: package 'sp' required by 'maptools' could not be found` it means it couldn't install the `sp` package for some reason - trying intstalling it separatley (`install.packages("sp", depend = TRUE`) and then install `maptools`. 
+
+
+### What does `x` do?
+
+If you're not sure what a particular function does, type `?`, followed by the function (e.g. `?summary`) and R will open the help file for that tool (`summary` in this case). You could also Google 'R summary' which should generate some useful results. 
